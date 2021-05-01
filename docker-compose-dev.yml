@@ -14,7 +14,7 @@ services:
       - 8069
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.fastapi.rule=HostRegexp(`{subdomain:[a-zA-Z0-9]+}.le-5ra.de`)"
+      - "traefik.http.routers.traefik-secure.rule=HostRegexp(`{subdomain:[a-zA-Z0-9]+}.le-5ra.de`)"
         #- "traefik.http.routers.traefik-secure.service=fontend-vida"
         #- traefik.http.routers.fastapi.priority=1000
         #- "traefik.http.routers.fastapi.rule=HostRegexp(`{subdomain:*.le-5ra.de`)"
