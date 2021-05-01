@@ -14,11 +14,8 @@ services:
       - 8069
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.fastapi.rule=HostRegexp(`{subdomain:[a-zA-Z0-9]+}.le-5ra.de`)"
-        #- "traefik.http.routers.traefik-secure.service=fontend-vida"
-        #- traefik.http.routers.fastapi.priority=1000
-        #- "traefik.http.routers.fastapi.rule=HostRegexp(`{subdomain:*.le-5ra.de`)"
-        #- "traefik.http.routers.fastapi.rule=Host(`ooodooo.le-5ra.de`)"
+        #- "traefik.http.routers.fastapi.rule=HostRegexp(`{subdomain:[a-z0-9]+}.le-5ra.de`)"
+      - "traefik.http.routers.fastapi.rule=Host(`cccvvv.le-5ra.de`)"
       - "traefik.http.routers.fastapi.tls=true"
       - "traefik.http.routers.fastapi.tls.certresolver=letsencrypt"
         #- "traefik.frontend.rule=Host:odoo.le-5ra.de"
@@ -48,4 +45,4 @@ volumes:
 networks:
   default:
     external:
-      name: proxy
+      name: traefik
