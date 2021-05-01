@@ -20,7 +20,7 @@ services:
         #- "traefik.http.routers.fastapi.rule=HostRegexp(`{subdomain:*.le-5ra.de`)"
         #- "traefik.http.routers.fastapi.rule=Host(`ooodooo.le-5ra.de`)"
       - "traefik.http.routers.fastapi.tls=true"
-      - "traefik.http.routers.fastapi.tls.certresolver=le-dns"
+#      - "traefik.http.routers.fastapi.tls.certresolver=le-dns"
         #- "traefik.frontend.rule=Host:odoo.le-5ra.de"
         #environment:
         #- VIRTUAL_HOST=le-5ra.de
