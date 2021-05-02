@@ -15,7 +15,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=traefik-proxy"
-      - "traefik.http.routers.odoorouter.rule=HostRegexp(`{subdomain:[a-zA-Z0-9]+}.le-5ra.de`)"
+      - "traefik.http.routers.odoorouter.rule=HostRegexp(`{subdomain:*}.le-5ra.de`)"
       - "traefik.http.routers.odoorouter.priority=500"
       - "traefik.http.routers.odoorouter.middlewares=secureHeaders@file"
       - "traefik.http.routers.odoorouter.tls.certresolver=letsencrypt"
