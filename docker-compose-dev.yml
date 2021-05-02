@@ -14,6 +14,7 @@ services:
       - 8069
     labels:
       - "traefik.enable=true"
+      - "traefik.docker.network=traefik-proxy"
       - "traefik.http.routers.traefik-secure.rule=HostRegexp(`{subdomain:[a-zA-Z0-9]+}.le-5ra.de`)"
       - "traefik.http.routers.traefik-secure.priority=1000"
         #- "traefik.http.routers.traefik-secure.service=fontend-vida"
