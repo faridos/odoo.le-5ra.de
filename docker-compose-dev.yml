@@ -20,7 +20,9 @@ services:
       - "traefik.http.routers.odoorouter.priority=500"
       - "traefik.http.routers.odoorouter.middlewares=secureHeaders@file"
 #      - "traefik.http.routers.odoorouter.service=api@internal"
-      - "traefik.http.routers.odoorouter.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.odoorouter.tls.certresolver=le-dns"
+      - "traefik.http.routers.odoorouter.tls.domains.main=dev.le-5ra.de"
+      - "traefik.http.routers.odoorouter.tls.domains.sans=*.le-5ra.de"
       - "traefik.http.routers.odoorouter.tls=true"
         #- "traefik.http.routers.traefik-secure.service=fontend-vida"
         #- traefik.http.routers.fastapi.priority=1000
