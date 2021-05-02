@@ -21,7 +21,7 @@ services:
       - "traefik.http.routers.odoorouter.middlewares=secureHeaders@file"
 #      - "traefik.http.routers.odoorouter.service=api@internal"
       - "traefik.http.routers.odoorouter.tls.certresolver=le-dns"
-      - "traefik.http.routers.odoorouter.tls.domains[0].main=dev.le-5ra.de"
+      - "traefik.http.routers.odoorouter.tls.domains[0].main=le-5ra.de"
       - "traefik.http.routers.odoorouter.tls.domains[0].sans=*.le-5ra.de"
       - "traefik.http.routers.odoorouter.tls=true"
         #- "traefik.http.routers.traefik-secure.service=fontend-vida"
