@@ -19,6 +19,7 @@ services:
       - "traefik.http.routers.odoorouter.priority=500"
       - "traefik.http.routers.odoorouter.middlewares=secureHeaders@file"
       - "traefik.http.routers.odoorouter.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.fastapi.tls=true"
         #- "traefik.http.routers.traefik-secure.service=fontend-vida"
         #- traefik.http.routers.fastapi.priority=1000
         #- "traefik.http.routers.fastapi.rule=HostRegexp(`{subdomain:*.le-5ra.de`)"
